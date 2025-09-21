@@ -1,0 +1,12 @@
+# Virtual environment
+venv/
+
+# pytorch cache files
+__pycache__/
+*.pyc
+
+# VS Code specific files
+.vscode/
+
+# Default database file for sqlite
+db.sqlite3
