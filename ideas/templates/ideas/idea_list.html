@@ -1,0 +1,39 @@
+<!DOCTYPE html> 
+<html lang="en"> 
+<head> 
+    <meta charset="UTF-8"> 
+    <title>Awesome Ideas Board</title> 
+    <style> 
+        body { font-family: sans-serif; background-color: #f4f4f9; color: #333; margin: 2rem; } 
+        h1 { text-align: center; color: #4a4a4a; } 
+        .board { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; } 
+        .card { background-color: #fff; border: 1px solid #ddd; border-radius: 8px; padding: 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1); } 
+        .card h2 { margin-top: 0; color: #0056b3; } 
+    </style> 
+</head> 
+<body> 
+  
+
+    <h1>Awesome Ideas Board</h1> 
+
+
+
+    <div class="board"> 
+        {% for idea in ideas %} 
+            <div class="card"> 
+                <h2>{{ idea.title }}</h2> 
+                <p>{{ idea.description }}</p> 
+            </div> 
+        {% empty %} 
+            <p>No ideas yet. Be the first to add one!</p> 
+        {% endfor %} 
+    </div> 
+
+  
+
+</body> 
+</html> 
+
+ 
+
+ 
